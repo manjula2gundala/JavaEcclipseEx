@@ -1,0 +1,41 @@
+// package declaration
+package Assessment_Package;
+// importing scanner class
+import java.util.Scanner;
+// class called Add numbers
+public class AddNumbers 
+{
+	// main method
+    public static void main(String[] args)
+    {
+    	// creating object for scanner class
+        Scanner sc = new Scanner(System.in);
+        boolean repeat;
+        // do-while loop
+        do 
+        {
+            // Get user input for two numbers
+            System.out.print("Enter the first number: ");
+            int num1 = sc.nextInt();
+            System.out.print("Enter the second number: ");
+            int num2 = sc.nextInt();
+
+            // Calculating the sum
+            double sumResult = num1 + num2;
+
+            // Displaying the result
+            System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sumResult);
+
+            // Ask the user if they want to repeat the operation
+            System.out.print("Do you want to perform the operation again? (yes/no): ");
+            String Choice = sc.next().toLowerCase();
+
+            // Check if the user wants to repeat the operation
+            repeat = Choice.equals("yes");
+
+        }
+        while (repeat); 
+        // closing scanner object
+        sc.close();
+    }
+}
